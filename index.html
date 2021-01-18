@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Shuttle Encryption</title>
+</head>
+
+<body>
+
+  <header class="bg-dar">
+    <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-dark">
+        <a class="logo" href="#">Shuttle Encryption</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item active">
+              <a class="nav-link disabled" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle disabled" href="#" id="dropdownId" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item disabled" href="#">Action 1</a>
+                <a class="dropdown-item disabled" href="#">Action 2</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 box mx-auto bg-light p-4 rounded">
+
+
+          <div class="d-flex">
+            <button id="btn-en" onclick="displayEncryption()"
+              class="btn text-light btn-outline-secondary w-50">Encrypt</button>
+            <button id="btn-de" onclick="displayDecryption()"
+              class="btn text-light btn-outline-secondary w-50">Decrypt</button>
+          </div>
+
+
+
+          <div id="encryption">
+            <input placeholder="Input your String"  id="string-e" type="text" class="form-control py-2 my-2">
+            <button onclick="encrypt()" class=" py-2 btn btn-secondary btn-block">Generate Encrypted Text</button>
+            <textarea class="form-control my-4" name="" id="output-e" cols="30" rows="6"></textarea>
+          </div>
+          <div id="decryption">
+            <input placeholder="Input your String" id="string-d" type="text" class="form-control py-2 my-2">
+            <button onclick="decrypt()" class=" py-2 btn btn-secondary btn-block">Generate Decrypted Text</button>
+            <textarea class="form-control my-4" name="" id="output-d" cols="30" rows="6"></textarea>
+          </div>
+          <p class="text-center">visit my <a href="https://github.com/Shariar-Hasan" target="_blank"><i
+                class="fab fa-github">Github</i></a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="text-center text-light"> &copy; Copyright Reserved 2021 | Shariar Hasan</p>
+  </footer>
+  <script src="js/encrypt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
