@@ -52,28 +52,51 @@
   <main class="d-flex justify-content-center align-items-center">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 box mx-auto bg-light p-4 rounded">
-
+        <div class="col-md-5 box mx-auto bg-light p-4 rounded">
+          <!-- ***************************************************** -->
+          <!-- selection feild  -->
+          <h1 id="text-hide" class="text-center">What do you want?</h1>
 
           <div class="d-flex">
             <button id="btn-en" onclick="displayEncryption()"
-              class="btn text-light btn-outline-secondary w-50">Encrypt</button>
+              class="btn text-light btn-outline-secondary w-50 py-3">Encryption</button>
             <button id="btn-de" onclick="displayDecryption()"
-              class="btn text-light btn-outline-secondary w-50">Decrypt</button>
+              class="btn text-light btn-outline-secondary w-50 py-3">Decryption</button>
           </div>
+          <!-- ***************************************************** -->
+
+          <div id="all-part">
+            <!-- encryption part  -->
+            <div id="encryption">
+              <input placeholder="Input your String" id="string-e" type="text" class="form-control py-2 my-2">
+              <div class="d-flex justify-content-evenly">
+                <button onclick="encrypt()" class="btn btn-secondary w-25 ">Encrypt It</button>
+                <button onclick="textCopy()" class="btn btn-outline-secondary text-light w-25 ">Copy Text</button>
+              </div>
+
+              <textarea placeholder="Encrypted text will appear here" class="form-control mt-2 mb-4" name=""
+                id="output-e" cols="30" rows="6"></textarea>
+            </div>
+
+            <!-- ***************************************************** -->
+            <!-- decryption part -->
+            <div id="decryption">
+              <input placeholder="Input your String" id="string-d" type="text" class="form-control py-2 my-2">
+              <div class="d-flex justify-content-evenly">
+                <button onclick="decrypt()" class="w-25 btn btn-secondary ">Decrypt It</button>
+                <button onclick="textCopy()" class="w-25 btn btn-outline-secondary text-light">Copy Text</button>
+              </div>
+              <textarea placeholder="Decrypted text will appear here" class="form-control mt-2 mb-4" name=""
+                id="output-d" cols="30" rows="6"></textarea>
+            </div>
+
+          </div>
+
+          <!-- ***************************************************** -->
 
 
 
-          <div id="encryption">
-            <input placeholder="Input your String"  id="string-e" type="text" class="form-control py-2 my-2">
-            <button onclick="encrypt()" class=" py-2 btn btn-secondary btn-block">Generate Encrypted Text</button>
-            <textarea class="form-control my-4" name="" id="output-e" cols="30" rows="6"></textarea>
-          </div>
-          <div id="decryption">
-            <input placeholder="Input your String" id="string-d" type="text" class="form-control py-2 my-2">
-            <button onclick="decrypt()" class=" py-2 btn btn-secondary btn-block">Generate Decrypted Text</button>
-            <textarea class="form-control my-4" name="" id="output-d" cols="30" rows="6"></textarea>
-          </div>
+          <!-- promotion :P -->
           <p class="text-center">visit my <a href="https://github.com/Shariar-Hasan" target="_blank"><i
                 class="fab fa-github">Github</i></a></p>
         </div>
