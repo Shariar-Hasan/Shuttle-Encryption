@@ -2,16 +2,16 @@
 function displayEncryption() {
     var en = document.getElementById("encryption");
     var de = document.getElementById("decryption");
-    
 
-                    // show hide
+
+    // show hide
     en.style.display = "block";
     de.style.display = "none";
     document.getElementById("all-part").style.display = "block";
     document.getElementById("text-hide").style.display = "none";
 
 
-                    // button color 
+    // button color 
     document.getElementById("btn-en").style.background = "#6C757D";
     document.getElementById("btn-de").style.background = "transparent";
 }
@@ -47,13 +47,13 @@ function displayDecryption() {
     var en = document.getElementById("encryption");
     var de = document.getElementById("decryption");
 
-                    // show hide
+    // show hide
     en.style.display = "none";
     de.style.display = "block";
     document.getElementById("all-part").style.display = "block";
     document.getElementById("text-hide").style.display = "none";
 
-                    // button color 
+    // button color 
     document.getElementById("btn-de").style.background = "#6C757D";
     document.getElementById("btn-en").style.background = "transparent";
 }
@@ -83,9 +83,38 @@ function decrypt() {
 }
 
 // copy function starts
-function textCopy()
-{
+function textCopy() {
     document.getElementById("output-e").select();
     document.getElementById("output-d").select();
     document.execCommand("copy");
+}
+
+
+
+
+//changing theme part
+
+function changeTheme() {
+    // previous color 474787
+    var getBody = document.getElementById("body");
+    var getTheme = document.getElementById("theme-change");
+    var getHeader = document.getElementById("header");
+    var getChecked = document.getElementById("checkbox");
+    var getBox = document.getElementById("box");
+    if (!getChecked.checked) {
+        getBody.style.background = "#ececec";
+        getBody.style.color = "black";
+        getBox.style.background = "#808e9b";
+        getHeader.style.background = "#ececec";
+        getTheme.innerHTML = "Dark Theme";
+
+    }
+    else {
+
+        getBody.style.background = "#485460";
+        getBody.style.color = "white";
+        getBox.style.background = "#1e272e";
+        getHeader.style.background = "#485460";
+        getTheme.innerHTML = "Light Theme";
+    }
 }
